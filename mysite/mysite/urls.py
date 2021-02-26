@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from dreamboard import views
+
 urlpatterns = [
-    path('dreamboard/', include('dreamboard.urls')),
+    path('', views.home, name='home'),
+    path('dreamboard/', views.index, name='index'),
     path('admin/', admin.site.urls),
+
 ]
